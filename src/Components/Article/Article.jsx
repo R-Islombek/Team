@@ -1,9 +1,6 @@
-import React from 'react'
-
 const Article = () => {
   return (
     <>
-    
         <div>
             <div className='container max-w-[1200px] mx-auto px-4'>
                 <div>
@@ -16,7 +13,6 @@ const Article = () => {
                 </div>
             </div>
         </div>
-    
     </>
   )
 }
