@@ -1,16 +1,22 @@
-import './App.css';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import News from './Components/News/News';
-function App() {
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Home from "./components/pages/Home";
 
+
+
+const App = () => {
   return (
-    <>
-        <Header/>
-        <News/>
-        <Footer/> 
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        {}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} /> {}
+          {/* <Route path="about" element={<About />} /> tepadan import qilb qoshib qoyasila shunaqa qilib qolgan pagelarni ham */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
