@@ -1,9 +1,9 @@
 import React from "react";
 
-import { FiFacebook } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa6";
-import { LuTwitter } from "react-icons/lu";
-import { CiYoutube } from "react-icons/ci";
+// import { FiFacebook } from "react-icons/fi";
+// import { FaInstagram } from "react-icons/fa6";
+// import { LuTwitter } from "react-icons/lu";
+// import { CiYoutube } from "react-icons/ci";
 import "./Footer.css"; // CSS faylni ulash
 
 const Footer = () => {
@@ -19,10 +19,10 @@ const Footer = () => {
               </a>
               <h2 className="footer-title">Bespoke software solutions</h2>
               <div className="footer-socials">
-                <a href="#" className="social-link"><FiFacebook /></a>
+                {/* <a href="#" className="social-link"><FiFacebook /></a>
                 <a href="#" className="social-link"><FaInstagram /></a>
                 <a href="#" className="social-link"><LuTwitter /></a>
-                <a href="#" className="social-link"><CiYoutube /></a>
+                <a href="#" className="social-link"><CiYoutube /></a> */}
               </div>
             </li>
 
