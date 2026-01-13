@@ -2,7 +2,12 @@ import React from 'react'
 
 const Article = () => {
   return (
-    <div>ARTICLE</div>
+    <div>
+        <h1>git fetch origin
+git checkout headersevara
+git pull origin headersevara</h1>
+    </div>
+    
   )
 }
 
