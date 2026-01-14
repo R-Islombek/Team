@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
- headersevara
+
     <header className="header-main">
       <div className="header-container">
         <div className="header-flex">

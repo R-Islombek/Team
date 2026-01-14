@@ -1,6 +1,7 @@
 .text {
-    color: black;
+    color: gray;
     font-size: 28px;
     font-weight: 900;
-    background-color: aquamarine;
+    margin-top: 200px;
+
 }
