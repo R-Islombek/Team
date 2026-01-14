@@ -1,4 +1,180 @@
-*{
-    background: black;
+/* Header Asosiy */
+.header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-img {
+    height: 2rem;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Desktop Navigatsiya */
+.nav-desktop {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .nav-desktop {
+        display: flex;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.link-text {
+    font-weight: 500;
+    color: #1D2130;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link-text:hover {
+    color: #0891b2;
+}
+
+.underline-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0891b2;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover .underline-effect {
+    width: 100%;
+}
+
+/* Tugmalar */
+.btn-clone {
+    background-color: rgba(245, 138, 7, 0.1);
+    color: #F58A07;
+    border-radius: 31px;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-clone:hover {
+    color: #60a5fa;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: #60a5fa;
+}
+
+/* Mobile Toggle (Hamburger) */
+.mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    z-index: 60;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .mobile-toggle {
+        display: none;
+    }
+}
+
+.bar {
+    width: 1.75rem;
+    height: 2px;
+    background-color: #1D2130;
+    border-radius: 999px;
+    transition: all 0.3s;
+}
+
+/* Hamburger Animatsiyasi */
+.active-1 { transform: rotate(45deg) translateY(8px); }
+.hide { opacity: 0; }
+.active-2 { transform: rotate(-45deg) translateY(-8px); }
+
+/* Mobile Menu Overlay */
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 50;
+}
+
+.mobile-overlay.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobile-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-list a {
+    text-decoration: none;
+    color: #1D2130;
+}
+
+.btn-clone-mobile {
+    background-color: #F58A07;
     color: white;
+    border-radius: 999px;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 10px 15px rgba(245, 138, 7, 0.3);
 }
