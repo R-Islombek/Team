@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Jang from './Images/jang.svg';
 import Jang2 from './Images/Jang2.png';
 import './About.css';
@@ -8,12 +7,20 @@ const About = () => {
   const images = [Jang, Jang2];
   const [current, setCurrent] = useState(0); 
 
+  // Automatic image change every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 3000); // 3000ms = 3s
+
+    return () => clearInterval(interval); // Clean up interval on unmount
+  }, []);
+
   const nextImage = () => {
     setCurrent((prev) => (prev + 1) % images.length); 
   };
 
   return (
-
     <div className="about">
       <div className="content">
         <div className="about-container">
