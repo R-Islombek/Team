@@ -34,6 +34,6 @@ const PreFooter = () => {
       </div>
     </>
   );
-};
+}
 
 export default PreFooter;
