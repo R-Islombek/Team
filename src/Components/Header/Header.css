@@ -5,7 +5,7 @@
     left            : 0;
     width           : 100%;
     z-index         : 99990;
-    background-color: #1D2130;
+    background-color: transparent;
     backdrop-filter : blur(12px);
     border-bottom   : 1px solid #f3f4f6;
     transition      : all 0.3s ease;
