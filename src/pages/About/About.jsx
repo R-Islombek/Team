@@ -9,7 +9,7 @@ const About = () => {
   const [current, setCurrent] = useState(0); 
 
   const nextImage = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+    setCurrent((prev) => (prev + 1) % images.length); 
   };
 
   return (
