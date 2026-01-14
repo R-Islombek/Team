@@ -1,6 +1,6 @@
 import React from 'react'
-import Jang from './assets/jang.svg'
-import Jang2 from './assets/Jang2.png'
+import Jang from './Images/jang.svg'
+import Jang2 from './Images/Jang2.png'
 import './About.css'
 
 const About = () => {
