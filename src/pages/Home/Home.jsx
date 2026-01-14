@@ -5,6 +5,7 @@ import Games from './Games/Games.jsx';
 import Article from '../../Components/Article/Article.jsx'
 import Sidebar from '../../Components/Sidebar/Sidebar.jsx';
 import Section from '../../Components/Section/Section.jsx';
+import PreFooter from '../../Components/PreFooter/PreFooter.jsx'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Article/>
       <Sidebar/>
       <Section/>
+      <PreFooter/>
     </>
  
 
