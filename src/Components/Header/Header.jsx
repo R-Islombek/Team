@@ -6,6 +6,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Desktop va mobile nav uchun array
+  const navItems = ["Home", "About us", "Portfolio", "News"];
+
+  // URL larni bo‘sh joysiz va kichik harf bilan qilish
+  const formatUrl = (item) =>
+    item === "Home" ? "/" : `/${item.toLowerCase().trim().replace(/\s+/g, "-")}`;
+
   return (
     <header className="header">
       <div className="container">
@@ -19,21 +26,18 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="nav__desktop">
               <ul className="nav__links">
-                {["Home", "About us ", "Portfolio", "News"].map((item) => (
+                {navItems.map((item) => (
                   <li key={item} className="nav__item">
-                    <Link
-                      to={
-                        item === "Home" ? "/" : `/${item.toLowerCase().trim()}`
-                      }
-                      className="link__text"
-                    >
+                    <Link to={formatUrl(item)} className="link__text">
                       {item}
                     </Link>
                     <span className="underline__effect"></span>
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone">Contact us</button>
+              </Link>
             </nav>
 
             {/* Hamburger Menu Button */}
@@ -50,19 +54,15 @@ const Header = () => {
             {/* Mobile Overlay Menu */}
             <div className={`mobile__overlay ${isOpen ? "show" : ""}`}>
               <ul className="mobile__list">
-                {["Home", "About us ", "Portfolio", "News"].map((item) => (
+                {navItems.map((item) => (
                   <li key={item} onClick={() => setIsOpen(false)}>
-                    <Link
-                      to={
-                        item === "Home" ? "/" : `/${item.toLowerCase().trim()}`
-                      }
-                    >
-                      {item}
-                    </Link>
+                    <Link to={formatUrl(item)}>{item}</Link>
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone-mobile">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone-mobile">Contact us</button>
+              </Link>
             </div>
           </div>
         </div>
