@@ -37,7 +37,9 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone">Contact us</button>
+              </Link>
             </nav>
 
             {/* Hamburger Menu Button */}
@@ -64,7 +66,9 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone-mobile">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone-mobile">Contact us</button>
+              </Link>
             </div>
           </div>
         </div>

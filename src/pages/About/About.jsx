@@ -4,6 +4,13 @@ import Jang2 from './Images/Jang2.png'
 import './About.css'
 
 const About = () => {
+  const images = [Jang, Jang2];
+  const [current, setCurrent] = useState(0); 
+
+  const nextImage = () => {
+    setCurrent((prev) => (prev + 1) % images.length); 
+  };
+
   return (
 
     <div className="about">
@@ -37,4 +44,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
