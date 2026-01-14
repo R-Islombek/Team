@@ -1,14 +1,11 @@
 import React from 'react'
-import Article from "../../Components/Article/Article"
 
+import Hero from './Hero/Hero.jsx'
 const Home = () => {
   return (
-    <div>
-
-           <Article/>
+   <Hero/>
 
 
-    </div>
   )
 }
 
