@@ -1,60 +1,51 @@
 import React from "react";
-
-
-import "./Footer.css"; // CSS faylni ulash
+import "./Footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="footer-main">
-      <div className="footer-container">
-        <div className="footer-content">
-          <ul className="footer-top-row">
-            {/* Brand Section */}
-            <li className="footer-brand">
-              <a href="/">
-                
-              </a>
-              <h2 className="footer-title">Bespoke software solutions</h2>
-              <div className="footer-socials">
-                
-              </div>
-            </li>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__container">
+          <div className="footer__brand">
+            <h2 className="footer__logo">LOGO</h2>
+            <p className="footer__text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <span className="footer__copy-at">@Lorem</span>
+          </div>
 
-            {/* Links Section */}
-            <li className="footer-column">
-              <h4 className="footer-col-title">Company</h4>
-              <a href="#" className="footer-link">About Us</a>
-              <a href="#" className="footer-link">Careers</a>
-              <a href="#" className="footer-link">Services</a>
-              <a href="#" className="footer-link">Blog</a>
-            </li>
+          <div className="footer__links">
+            <h3>About us</h3>
+            <ul>
+              <li><a href="#">Zeux</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
 
-            {/* Connect Section */}
-            <li className="footer-column">
-              <h4 className="footer-col-title">Connect</h4>
-              <a href="mailto:hi@finsweet.com" className="footer-link">hi@finsweet.com</a>
-              <a href="tel:+1234567890" className="footer-link">+(123) 456-7890</a>
-            </li>
+          <div className="footer__contact">
+            <h3>Contact us</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="footer__phone">+908 89097 890</p>
+          </div>
 
-            {/* Newsletter Section */}
-            <li className="footer-column newsletter">
-              <h4 className="footer-col-title">Join Newsletter</h4>
-              <div className="newsletter-input-group">
-                <input type="email" required placeholder="Your Email" className="footer-input" />
-              </div>
-              <button type="submit" className="footer-btn">Subscribe</button>
-            </li>
-          </ul>
-
-          {/* Bottom Bar */}
-          <div className="footer-bottom">
-            <p className="copyright">© All rights reserved – Finsweet</p>
-            <div className="footer-legal">
-              <a href="#" className="legal-link">Privacy Policy</a>
-              <a href="#" className="legal-link">Terms & Conditions</a>
+          <div className="footer__social">
+            <div className="social__icons">
+              <a href="#" className="icon"><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
           </div>
         </div>
+      </div>
+      
+      <div className="footer__bottom">
+        <hr />
+        <p>Copyright ® 2022 prodesignar All rights Reserved</p>
       </div>
     </footer>
   );
