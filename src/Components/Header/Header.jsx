@@ -9,12 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
- 
-    <header className="header">
-      <div className="container">
-        <div className="header__container">
-        <div className="header__flex">
-          
+
           {/* Logo */}
           <Link to="/" className="logo__box">
            <h1 className="logo__img">LOGO</h1>
