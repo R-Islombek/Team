@@ -4,13 +4,19 @@ import "./Header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Mobil menyuni ochish/yopish funksiyasi
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  // Linklar ro'yxati (App.jsx dagi pathlar bilan mos bo'lishi kerak)
+  const navItems = ["Home", "About", "Portfolio", "News"];
 
   return (
     <header className="header">
       <div className="container">
         <div className="header__container">
           <div className="header__flex">
+            
             {/* Logo */}
             <Link to="/" className="logo__box">
               <h1 className="logo__img">LOGO</h1>
@@ -19,12 +25,10 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="nav__desktop">
               <ul className="nav__links">
-                {["Home", "About us ", "Portfolio", "News"].map((item) => (
+                {navItems.map((item) => (
                   <li key={item} className="nav__item">
                     <Link
-                      to={
-                        item === "Home" ? "/" : `/${item.toLowerCase().trim()}`
-                      }
+                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
                       className="link__text"
                     >
                       {item}
@@ -50,12 +54,10 @@ const Header = () => {
             {/* Mobile Overlay Menu */}
             <div className={`mobile__overlay ${isOpen ? "show" : ""}`}>
               <ul className="mobile__list">
-                {["Home", "About us ", "Portfolio", "News"].map((item) => (
+                {navItems.map((item) => (
                   <li key={item} onClick={() => setIsOpen(false)}>
                     <Link
-                      to={
-                        item === "Home" ? "/" : `/${item.toLowerCase().trim()}`
-                      }
+                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
                     >
                       {item}
                     </Link>

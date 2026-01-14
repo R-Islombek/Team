@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout/Layout.jsx";
 import Home from "./pages/Home/Home.jsx";
-
+import About from "./pages/About/About.jsx";
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         {}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} /> {}
-          {/* <Route path="about" element={<About />} /> tepadan import qilb qoshib qoyasila shunaqa qilib qolgan pagelarni ham */}
+           <Route path="about" element={<About />} /> 
         </Route>
       </Routes>
     </BrowserRouter>
