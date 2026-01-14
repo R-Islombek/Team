@@ -8,8 +8,12 @@ const Header = () => {
   // Mobil menyuni ochish/yopish funksiyasi
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Linklar ro'yxati (App.jsx dagi pathlar bilan mos bo'lishi kerak)
-  const navItems = ["Home", "About", "Portfolio", "News"];
+  // Desktop va mobile nav uchun array
+  const navItems = ["Home", "About us", "Portfolio", "News"];
+
+  // URL larni bo‘sh joysiz va kichik harf bilan qilish
+  const formatUrl = (item) =>
+    item === "Home" ? "/" : `/${item.toLowerCase().trim().replace(/\s+/g, "-")}`;
 
   return (
     <header className="header">
@@ -27,17 +31,16 @@ const Header = () => {
               <ul className="nav__links">
                 {navItems.map((item) => (
                   <li key={item} className="nav__item">
-                    <Link
-                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
-                      className="link__text"
-                    >
+                    <Link to={formatUrl(item)} className="link__text">
                       {item}
                     </Link>
                     <span className="underline__effect"></span>
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone">Contact us</button>
+              </Link>
             </nav>
 
             {/* Hamburger Menu Button */}
@@ -56,15 +59,13 @@ const Header = () => {
               <ul className="mobile__list">
                 {navItems.map((item) => (
                   <li key={item} onClick={() => setIsOpen(false)}>
-                    <Link
-                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
-                    >
-                      {item}
-                    </Link>
+                    <Link to={formatUrl(item)}>{item}</Link>
                   </li>
                 ))}
               </ul>
-              <button className="btn__clone-mobile">Contact us</button>
+              <Link to="/contact">
+                <button className="btn__clone-mobile">Contact us</button>
+              </Link>
             </div>
           </div>
         </div>

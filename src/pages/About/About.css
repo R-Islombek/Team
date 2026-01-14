@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  margin-top: 60px;
+>>>>>>> 804b36638bd9b091a5d6bacd19763d4409239caf
 }
 
 .about-container ul {
@@ -19,6 +23,12 @@
 
 .about__link {
   color: #ffffff;
+<<<<<<< HEAD
+=======
+  transition: color 0.3s ease;
+  font-size: 20px;
+
+>>>>>>> 804b36638bd9b091a5d6bacd19763d4409239caf
   text-decoration: none;
 }
 
