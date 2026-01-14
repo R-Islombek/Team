@@ -8,12 +8,8 @@ const Header = () => {
   // Mobil menyuni ochish/yopish funksiyasi
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Desktop va mobile nav uchun array
-  const navItems = ["Home", "About us", "Portfolio", "News"];
-
-  // URL larni bo‘sh joysiz va kichik harf bilan qilish
-  const formatUrl = (item) =>
-    item === "Home" ? "/" : `/${item.toLowerCase().trim().replace(/\s+/g, "-")}`;
+  // Linklar ro'yxati (App.jsx dagi pathlar bilan mos bo'lishi kerak)
+  const navItems = ["Home", "About", "Portfolio", "News"];
 
   return (
     <header className="header">
@@ -31,7 +27,10 @@ const Header = () => {
               <ul className="nav__links">
                 {navItems.map((item) => (
                   <li key={item} className="nav__item">
-                    <Link to={formatUrl(item)} className="link__text">
+                    <Link
+                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
+                      className="link__text"
+                    >
                       {item}
                     </Link>
                     <span className="underline__effect"></span>
@@ -59,7 +58,11 @@ const Header = () => {
               <ul className="mobile__list">
                 {navItems.map((item) => (
                   <li key={item} onClick={() => setIsOpen(false)}>
-                    <Link to={formatUrl(item)}>{item}</Link>
+                    <Link
+                      to={item === "Home" ? "/" : `/${item.toLowerCase().trim()}`}
+                    >
+                      {item}
+                    </Link>
                   </li>
                 ))}
               </ul>

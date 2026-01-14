@@ -1,9 +1,10 @@
 
+
 import React, { useState } from 'react';
 import Jang from './Images/jang.svg';
 import Jang2 from './Images/Jang2.png';
 import './About.css';
->>>>>>> 804b36638bd9b091a5d6bacd19763d4409239caf
+
 
 const About = () => {
   const images = [Jang, Jang2];
@@ -56,7 +57,7 @@ const About = () => {
 
   )
 }
-  );
-};
+ 
+
 
 export default About;
