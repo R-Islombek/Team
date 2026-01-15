@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Jang from './Images/jang.svg';
 import Jang2 from './Images/Jang2.png';
 import './About.css';
